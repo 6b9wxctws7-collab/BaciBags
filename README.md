@@ -7,38 +7,42 @@ voll responsive (Handy, Tablet, Desktop).
 ## Dateistruktur
 
 ```
-index.html      – Seitenstruktur & Inhalte (Deutsch)
+index.html      – Startseite (Hero, Kollektion, Über uns, Kontakt …)
+produkt.html    – Vorlage für die einzelnen Produktseiten (?id=…)
+products.js     – Zentrale Produktdaten (Name, Preis, Bilder, Texte)
+produkt.js      – Rendert die Produktseite + Galerie/Lightbox
 style.css       – Styling, Farben, Responsive-Layout, Animationen
 script.js       – Burger-Menü, Scroll-Effekte, Formular, Reveal-Animation
-images/         – Platzhalterbilder (SVG) – einfach ersetzen
+images/         – Produktfotos & Logo
 ```
 
-## Abschnitte
+## Abschnitte (Startseite)
 
 Header/Navigation · Hero · Kollektion (4 Taschen) · Über uns ·
 Highlights · Kontakt (Formular + Instagram) · Footer
 
-## Produkte & Bilder
+## Produktseiten
 
-Die echten Produktfotos liegen im Ordner `images/`. Jede Tasche ist als
-**Produkt** mit eigener Bildergalerie hinterlegt – ein Klick auf ein Produktbild
-oder den „Details“-Button öffnet eine Lightbox, in der man durch alle Ansichten
-blättern kann (Pfeiltasten / Wischen / Klick).
+Jede Tasche hat eine eigene, vollständige Detailseite. Ein Klick auf eine
+Produktkarte in der Kollektion öffnet `produkt.html?id=<slug>` mit großer
+Bildergalerie (Thumbnails + Lightbox zum Vergrößern), Beschreibung, Details,
+Materialangaben und einem „Jetzt anfragen“-Button. Dieser springt zurück zum
+Kontaktformular auf der Startseite und füllt die Nachricht passend vor.
 
-| Produkt        | Farbe       | Bilder                                       |
-|----------------|-------------|----------------------------------------------|
-| Bianco Amore   | Creme-Weiß  | IMG_1885, IMG_1895, IMG_1896, IMG_1897       |
-| Nero Notte     | Schwarz     | IMG_1888, IMG_1891                           |
-| Grigio Perla   | Perlgrau    | IMG_1894, IMG_1889, IMG_1890                 |
-| Rosa Bacio     | Zartes Rosa | IMG_1887, IMG_1892                           |
+| Produkt        | Slug (`?id=`)  | Farbe       | Bilder                                  |
+|----------------|----------------|-------------|-----------------------------------------|
+| Bianco Amore   | `bianco-amore` | Creme-Weiß  | IMG_1885, IMG_1895, IMG_1896, IMG_1897  |
+| Nero Notte     | `nero-notte`   | Schwarz     | IMG_1888, IMG_1891                      |
+| Grigio Perla   | `grigio-perla` | Perlgrau    | IMG_1894, IMG_1889, IMG_1890            |
+| Rosa Bacio     | `rosa-bacio`   | Zartes Rosa | IMG_1887, IMG_1892                      |
 
 Zusätzlich verwendet: `IMG_1885` im Hero-Bereich und `IMG_1897` (Detailaufnahme)
 im „Über uns“-Abschnitt.
 
-> Produkte/Bilder ändern: Die Galerie jeder Tasche steht im `data-gallery`-Attribut
-> der jeweiligen `.card` in `index.html` (Pfade mit `|` getrennt). Einfach
-> Dateinamen austauschen oder ergänzen – die Anzahl der „Ansichten“ aktualisiert
-> sich entsprechend.
+> Produkte/Texte/Bilder ändern: Alles steht zentral in **`products.js`**
+> (Preis, Farbe, Beschreibung, `images`-Liste …). Neue Tasche = einfach einen
+> Eintrag ergänzen und in `index.html` eine Karte mit `href="produkt.html?id=<slug>"`
+> hinzufügen.
 
 ## Lokal ansehen
 

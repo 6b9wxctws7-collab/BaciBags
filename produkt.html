@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baci Bags – Produktdetails</title>
+    <meta name="description" content="Produktdetails einer handgefertigten Baci Bag – Chunky-Knit, Made in Italy, mit Kristall-Charms und Gold-/Silberketten.">
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage">
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo" aria-label="Baci Bags – Home">
+                <img src="images/logo.png" alt="Baci Bags – Handmade in Italy">
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#kollektion">Kollektion</a></li>
+                    <li><a href="index.html#ueber-uns">Über uns</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============ PRODUKT-DETAIL ============ -->
+    <main class="product-page">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Brotkrümel-Navigation">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#kollektion">Kollektion</a>
+                <span>/</span>
+                <span class="current" id="breadcrumbName">Produkt</span>
+            </nav>
+
+            <div id="productDetail" class="product-detail">
+                <!-- wird von produkt.js befüllt -->
+            </div>
+
+            <noscript>
+                <p style="text-align:center;padding:40px 0">
+                    Bitte aktiviere JavaScript, um die Produktdetails zu sehen.
+                    <a href="index.html#kollektion">Zurück zur Kollektion</a>
+                </p>
+            </noscript>
+        </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="logo logo-footer" aria-label="Baci Bags – Home">
+                <img src="images/logo.png" alt="Baci Bags – Handmade in Italy">
+            </a>
+            <p class="footer-tagline">Handgestrickte Eleganz aus Italien</p>
+            <div class="socials" aria-label="Social Media">
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest">p</a>
+            </div>
+            <p class="copyright">© <span id="year"></span> Baci Bags · Fatto a mano in Italia</p>
+        </div>
+    </footer>
+
+    <!-- ============ LIGHTBOX / PRODUKT-GALERIE ============ -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Produktgalerie">
+        <button class="lb-close" id="lbClose" aria-label="Schließen">×</button>
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Vorheriges Bild">‹</button>
+        <div class="lb-stage">
+            <img src="" alt="" id="lbImage">
+            <p class="lb-caption" id="lbCaption"></p>
+        </div>
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Nächstes Bild">›</button>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="produkt.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

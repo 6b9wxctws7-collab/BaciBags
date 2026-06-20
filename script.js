@@ -37,78 +37,28 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    /* ---- Produkt-Galerie / Lightbox ---- */
-    var lightbox = document.getElementById('lightbox');
-    var lbImage = document.getElementById('lbImage');
-    var lbCaption = document.getElementById('lbCaption');
-    var lbClose = document.getElementById('lbClose');
-    var lbPrev = document.getElementById('lbPrev');
-    var lbNext = document.getElementById('lbNext');
-
-    var currentImages = [];
-    var currentName = '';
-    var currentIndex = 0;
-
-    function renderLb() {
-        if (!currentImages.length) return;
-        lbImage.style.opacity = '0';
-        var src = currentImages[currentIndex];
-        var img = new Image();
-        img.onload = function () {
-            lbImage.src = src;
-            lbImage.alt = currentName + ' – Ansicht ' + (currentIndex + 1);
-            lbCaption.textContent = currentName + '  ·  ' + (currentIndex + 1) + ' / ' + currentImages.length;
-            lbImage.style.opacity = '1';
-        };
-        img.src = src;
+    /* ---- Anfrage von einer Produktseite vorbefüllen ---- */
+    var params = new URLSearchParams(window.location.search);
+    var produkt = params.get('produkt');
+    if (produkt) {
+        var msgField = document.getElementById('message');
+        if (msgField) {
+            msgField.value = 'Ich interessiere mich für die Tasche „' + produkt +
+                '“. Bitte sendet mir weitere Informationen. 💋';
+        }
+        var note = document.getElementById('formNote');
+        if (note) {
+            note.textContent = 'Schön, dass dir „' + produkt + '“ gefällt! Hinterlasse uns einfach deine Daten.';
+            note.className = 'form-note success';
+        }
+        var kontakt = document.getElementById('kontakt');
+        if (kontakt) {
+            // nach dem Laden sanft zum Formular scrollen
+            window.addEventListener('load', function () {
+                kontakt.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
     }
-
-    function openGallery(card, startIndex) {
-        var gallery = card.getAttribute('data-gallery') || '';
-        currentImages = gallery.split('|').filter(Boolean);
-        currentName = card.getAttribute('data-name') || '';
-        currentIndex = startIndex || 0;
-        var hasMany = currentImages.length > 1;
-        lbPrev.style.display = hasMany ? '' : 'none';
-        lbNext.style.display = hasMany ? '' : 'none';
-        renderLb();
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeGallery() {
-        lightbox.classList.remove('open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
-
-    function step(dir) {
-        if (!currentImages.length) return;
-        currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
-        renderLb();
-    }
-
-    document.querySelectorAll('.products .card').forEach(function (card) {
-        // Klick auf Bild oder "Details" öffnet die Galerie
-        var imgWrap = card.querySelector('.card-img');
-        if (imgWrap) imgWrap.addEventListener('click', function () { openGallery(card, 0); });
-        var detailsBtn = card.querySelector('[data-details]');
-        if (detailsBtn) detailsBtn.addEventListener('click', function () { openGallery(card, 0); });
-    });
-
-    lbClose.addEventListener('click', closeGallery);
-    lbPrev.addEventListener('click', function () { step(-1); });
-    lbNext.addEventListener('click', function () { step(1); });
-    lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) closeGallery();
-    });
-    document.addEventListener('keydown', function (e) {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape') closeGallery();
-        else if (e.key === 'ArrowLeft') step(-1);
-        else if (e.key === 'ArrowRight') step(1);
-    });
 
     /* ---- Kontaktformular (Demo, ohne Backend) ---- */
     var form = document.getElementById('contactForm');
