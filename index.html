@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baci Bags – Handgestrickte Eleganz aus Italien</title>
+    <meta name="description" content="Baci Bags – handgefertigte Luxus-Taschen aus grobem Chunky-Knit-Garn. Mit Liebe gefertigt in Italien. Limitierte Stücke mit Kristall-Charms und Gold-Akzenten.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-wrap">
+            <a href="#home" class="logo">
+                <span class="logo-mark">Baci</span>
+                <span class="logo-sub">Bags</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#kollektion">Kollektion</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyecatch">Handmade in Italy · con amore</p>
+                <h1>Baci Bags<br><span>Handgestrickte Eleganz aus Italien</span></h1>
+                <p class="hero-lead">
+                    Liebevoll von Hand gefertigte Taschen aus weichem Chunky-Knit-Garn –
+                    veredelt mit funkelnden Kristall-Charms und goldenen Ketten.
+                    Ein Kuss aus Italien für deinen Stil.
+                </p>
+                <a href="#kollektion" class="btn btn-gold">Jetzt entdecken</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hero-bag.svg" alt="Handgestrickte Baci Bag in Creme mit Kristall-Charms und Goldkette" loading="eager">
+                <span class="hero-badge">Limited Edition</span>
+            </div>
+        </div>
+        <a href="#kollektion" class="scroll-hint" aria-label="Nach unten scrollen">↓</a>
+    </section>
+
+    <!-- ============ KOLLEKTION ============ -->
+    <section class="section collection" id="kollektion">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyecatch">Unsere Kollektion</p>
+                <h2>Jede Tasche ein Unikat</h2>
+                <p class="section-sub">
+                    Vier Lieblingsstücke, handgestrickt und einzeln veredelt – wähle deine Farbe der Liebe.
+                </p>
+            </div>
+
+            <div class="grid products">
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="images/bag-white.svg" alt="Weiße Chunky-Knit Tasche mit Kristall-Herz-Charm und Goldkette" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Bianco Amore</h3>
+                        <p class="card-color"><span class="dot" style="--dot:#f6f3ee"></span> Creme-Weiß · Kristall-Charms · Goldkette</p>
+                        <div class="card-foot">
+                            <span class="price">249 €</span>
+                            <button class="btn btn-outline" data-bag="Bianco Amore">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="images/bag-black.svg" alt="Schwarze Chunky-Knit Tasche mit Kristallketten und Goldkette" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Nero Notte</h3>
+                        <p class="card-color"><span class="dot" style="--dot:#1c1c1c"></span> Schwarz · Kristallketten · Goldkette</p>
+                        <div class="card-foot">
+                            <span class="price">269 €</span>
+                            <button class="btn btn-outline" data-bag="Nero Notte">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="images/bag-grey.svg" alt="Graue Chunky-Knit Tasche mit Kristall-Henkel und Herz-Charm" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Grigio Perla</h3>
+                        <p class="card-color"><span class="dot" style="--dot:#cfd0d2"></span> Perlgrau · Kristall-Henkel · Silberkette</p>
+                        <div class="card-foot">
+                            <span class="price">259 €</span>
+                            <button class="btn btn-outline" data-bag="Grigio Perla">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="images/bag-pink.svg" alt="Rosa Chunky-Knit Tasche mit Fellbommel, Kristall-Charms und Goldkette" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Rosa Bacio</h3>
+                        <p class="card-color"><span class="dot" style="--dot:#f3c5cf"></span> Zartes Rosa · Kristall-Charms · Goldkette</p>
+                        <div class="card-foot">
+                            <span class="price">259 €</span>
+                            <button class="btn btn-outline" data-bag="Rosa Bacio">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ÜBER UNS ============ -->
+    <section class="section about" id="ueber-uns">
+        <div class="container about-inner">
+            <div class="about-image">
+                <img src="images/about.svg" alt="Handarbeit an einer Chunky-Knit Tasche in der italienischen Manufaktur" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p class="eyecatch">Über uns</p>
+                <h2>Mit Liebe von Hand gefertigt</h2>
+                <p>
+                    Baci Bags ist eine kleine italienische Manufaktur, in der jede Tasche
+                    Masche für Masche von Hand entsteht. „Baci“ bedeutet „Küsse“ – und genau
+                    so viel Zuneigung steckt in jedem einzelnen Stück.
+                </p>
+                <p>
+                    Wir verwenden ausschließlich besonders weiches, hochwertiges Chunky-Knit-Garn
+                    und veredeln jede Tasche mit handgesetzten Kristall-Charms sowie Ketten in
+                    Gold und Silber. So wird aus reiner Handwerkskunst ein kleines Luxus-Accessoire.
+                </p>
+                <p class="signature">— Fatto a mano, con amore. 💋</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HIGHLIGHTS ============ -->
+    <section class="section highlights">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyecatch">Warum Baci Bags</p>
+                <h2>Was uns besonders macht</h2>
+            </div>
+
+            <div class="grid features">
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">✿</div>
+                    <h3>Handgefertigt</h3>
+                    <p>Jede Tasche wird einzeln von Hand gestrickt – kein Stück gleicht dem anderen.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">★</div>
+                    <h3>Made in Italy</h3>
+                    <p>Entworfen und gefertigt in Italien, mit echter Leidenschaft fürs Detail.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">❤</div>
+                    <h3>Limitierte Stücke</h3>
+                    <p>Nur in kleinen Mengen verfügbar – exklusiv und immer ein Unikat.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">✦</div>
+                    <h3>Premium-Materialien</h3>
+                    <p>Weiches Garn, funkelnde Kristalle und edle Ketten in Gold und Silber.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section contact" id="kontakt">
+        <div class="container contact-inner">
+            <div class="contact-text">
+                <p class="eyecatch">Kontakt</p>
+                <h2>Schreib uns einen Kuss</h2>
+                <p>
+                    Du hast eine Frage, einen Sonderwunsch oder möchtest dein eigenes Unikat?
+                    Wir freuen uns auf deine Nachricht.
+                </p>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-link">
+                    <span class="insta-icon" aria-hidden="true">◎</span> @bacibags
+                </a>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Dein Name" required>
+                </div>
+                <div class="field">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+                </div>
+                <div class="field">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Deine Nachricht …" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold">Nachricht senden</button>
+                <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="#home" class="logo logo-footer">
+                <span class="logo-mark">Baci</span>
+                <span class="logo-sub">Bags</span>
+            </a>
+            <p class="footer-tagline">Handgestrickte Eleganz aus Italien</p>
+            <div class="socials" aria-label="Social Media">
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest">p</a>
+            </div>
+            <p class="copyright">© <span id="year"></span> Baci Bags · Fatto a mano in Italia</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
