@@ -18,23 +18,27 @@ images/         – Platzhalterbilder (SVG) – einfach ersetzen
 Header/Navigation · Hero · Kollektion (4 Taschen) · Über uns ·
 Highlights · Kontakt (Formular + Instagram) · Footer
 
-## Bilder ersetzen
+## Produkte & Bilder
 
-Die Bilder im Ordner `images/` sind Platzhalter. Ersetze sie einfach durch
-deine echten Fotos – entweder die SVG-Dateien überschreiben oder die
-Dateinamen in `index.html` anpassen:
+Die echten Produktfotos liegen im Ordner `images/`. Jede Tasche ist als
+**Produkt** mit eigener Bildergalerie hinterlegt – ein Klick auf ein Produktbild
+oder den „Details“-Button öffnet eine Lightbox, in der man durch alle Ansichten
+blättern kann (Pfeiltasten / Wischen / Klick).
 
-| Datei              | Verwendung                  | Empf. Format |
-|--------------------|-----------------------------|--------------|
-| `hero-bag.svg`     | großes Hero-Bild            | 820 × 920    |
-| `bag-white.svg`    | Kollektion – Bianco Amore   | 4:5          |
-| `bag-black.svg`    | Kollektion – Nero Notte     | 4:5          |
-| `bag-grey.svg`     | Kollektion – Grigio Perla   | 4:5          |
-| `bag-pink.svg`     | Kollektion – Rosa Bacio     | 4:5          |
-| `about.svg`        | Über-uns-Bild               | beliebig     |
+| Produkt        | Farbe       | Bilder                                       |
+|----------------|-------------|----------------------------------------------|
+| Bianco Amore   | Creme-Weiß  | IMG_1885, IMG_1895, IMG_1896, IMG_1897       |
+| Nero Notte     | Schwarz     | IMG_1888, IMG_1891                           |
+| Grigio Perla   | Perlgrau    | IMG_1894, IMG_1889, IMG_1890                 |
+| Rosa Bacio     | Zartes Rosa | IMG_1887, IMG_1892                           |
 
-> Tipp: Behältst du die gleichen Dateinamen, musst du nichts im Code ändern.
-> Nutzt du `.jpg` statt `.svg`, passe die `src`-Attribute in `index.html` an.
+Zusätzlich verwendet: `IMG_1885` im Hero-Bereich und `IMG_1897` (Detailaufnahme)
+im „Über uns“-Abschnitt.
+
+> Produkte/Bilder ändern: Die Galerie jeder Tasche steht im `data-gallery`-Attribut
+> der jeweiligen `.card` in `index.html` (Pfade mit `|` getrennt). Einfach
+> Dateinamen austauschen oder ergänzen – die Anzahl der „Ansichten“ aktualisiert
+> sich entsprechend.
 
 ## Lokal ansehen
 

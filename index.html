@@ -54,7 +54,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="images/hero-bag.svg" alt="Handgestrickte Baci Bag in Creme mit Kristall-Charms und Goldkette" loading="eager">
+                <img src="images/IMG_1885.jpeg" alt="Handgestrickte Baci Bag in Creme-Weiß mit Kristall-Charms und Goldkette" loading="eager">
                 <span class="hero-badge">Limited Edition</span>
             </div>
         </div>
@@ -74,58 +74,70 @@
 
             <div class="grid products">
 
-                <article class="card">
+                <article class="card"
+                         data-name="Bianco Amore"
+                         data-gallery="images/IMG_1885.jpeg|images/IMG_1895.jpeg|images/IMG_1896.jpeg|images/IMG_1897.jpeg">
                     <div class="card-img">
-                        <img src="images/bag-white.svg" alt="Weiße Chunky-Knit Tasche mit Kristall-Herz-Charm und Goldkette" loading="lazy">
+                        <img src="images/IMG_1885.jpeg" alt="Weiße Chunky-Knit Tasche mit Kristall-Herz-Charm und Goldkette" loading="lazy">
+                        <span class="card-count">4 Ansichten</span>
                     </div>
                     <div class="card-body">
                         <h3>Bianco Amore</h3>
                         <p class="card-color"><span class="dot" style="--dot:#f6f3ee"></span> Creme-Weiß · Kristall-Charms · Goldkette</p>
                         <div class="card-foot">
                             <span class="price">249 €</span>
-                            <button class="btn btn-outline" data-bag="Bianco Amore">Details</button>
+                            <button class="btn btn-outline" data-details>Details</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card"
+                         data-name="Nero Notte"
+                         data-gallery="images/IMG_1888.jpeg|images/IMG_1891.jpeg">
                     <div class="card-img">
-                        <img src="images/bag-black.svg" alt="Schwarze Chunky-Knit Tasche mit Kristallketten und Goldkette" loading="lazy">
+                        <img src="images/IMG_1888.jpeg" alt="Schwarze Chunky-Knit Tasche mit Kristallketten und Goldkette" loading="lazy">
+                        <span class="card-count">2 Ansichten</span>
                     </div>
                     <div class="card-body">
                         <h3>Nero Notte</h3>
                         <p class="card-color"><span class="dot" style="--dot:#1c1c1c"></span> Schwarz · Kristallketten · Goldkette</p>
                         <div class="card-foot">
                             <span class="price">269 €</span>
-                            <button class="btn btn-outline" data-bag="Nero Notte">Details</button>
+                            <button class="btn btn-outline" data-details>Details</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card"
+                         data-name="Grigio Perla"
+                         data-gallery="images/IMG_1894.jpeg|images/IMG_1889.jpeg|images/IMG_1890.jpeg">
                     <div class="card-img">
-                        <img src="images/bag-grey.svg" alt="Graue Chunky-Knit Tasche mit Kristall-Henkel und Herz-Charm" loading="lazy">
+                        <img src="images/IMG_1894.jpeg" alt="Graue Chunky-Knit Tasche mit Kristall-Henkel und Herz-Charm" loading="lazy">
+                        <span class="card-count">3 Ansichten</span>
                     </div>
                     <div class="card-body">
                         <h3>Grigio Perla</h3>
                         <p class="card-color"><span class="dot" style="--dot:#cfd0d2"></span> Perlgrau · Kristall-Henkel · Silberkette</p>
                         <div class="card-foot">
                             <span class="price">259 €</span>
-                            <button class="btn btn-outline" data-bag="Grigio Perla">Details</button>
+                            <button class="btn btn-outline" data-details>Details</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card"
+                         data-name="Rosa Bacio"
+                         data-gallery="images/IMG_1887.jpeg|images/IMG_1892.jpeg">
                     <div class="card-img">
-                        <img src="images/bag-pink.svg" alt="Rosa Chunky-Knit Tasche mit Fellbommel, Kristall-Charms und Goldkette" loading="lazy">
+                        <img src="images/IMG_1887.jpeg" alt="Rosa Chunky-Knit Tasche mit Fellbommel, Kristall-Charms und Goldkette" loading="lazy">
+                        <span class="card-count">2 Ansichten</span>
                     </div>
                     <div class="card-body">
                         <h3>Rosa Bacio</h3>
                         <p class="card-color"><span class="dot" style="--dot:#f3c5cf"></span> Zartes Rosa · Kristall-Charms · Goldkette</p>
                         <div class="card-foot">
                             <span class="price">259 €</span>
-                            <button class="btn btn-outline" data-bag="Rosa Bacio">Details</button>
+                            <button class="btn btn-outline" data-details>Details</button>
                         </div>
                     </div>
                 </article>
@@ -138,7 +150,7 @@
     <section class="section about" id="ueber-uns">
         <div class="container about-inner">
             <div class="about-image">
-                <img src="images/about.svg" alt="Handarbeit an einer Chunky-Knit Tasche in der italienischen Manufaktur" loading="lazy">
+                <img src="images/IMG_1897.jpeg" alt="Detailaufnahme einer handgestrickten Baci Bag mit Kristall-Charms" loading="lazy">
             </div>
             <div class="about-text">
                 <p class="eyecatch">Über uns</p>
@@ -241,6 +253,17 @@
             <p class="copyright">© <span id="year"></span> Baci Bags · Fatto a mano in Italia</p>
         </div>
     </footer>
+
+    <!-- ============ LIGHTBOX / PRODUKT-GALERIE ============ -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Produktgalerie">
+        <button class="lb-close" id="lbClose" aria-label="Schließen">×</button>
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Vorheriges Bild">‹</button>
+        <div class="lb-stage">
+            <img src="" alt="" id="lbImage">
+            <p class="lb-caption" id="lbCaption"></p>
+        </div>
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Nächstes Bild">›</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
